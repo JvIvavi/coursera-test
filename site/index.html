@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jotavi Ivavi</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  font-size: 17px;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+
+.content {
+  position: fixed;
+  bottom: 0;
+  
+  color: #f1f1f1;
+  width: 100%;
+  padding: 10px;
+}
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: white;
+  color: black;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: black;
+  color: white;
+</style>
+</head>
+<body>
+
+<video loop id="myVideo">
+  <source src="onmyway.mp4" type="video/mp4">
+</video>
+
+<div class="content">
+	 <h1>Jotavi Ivavi - On My Way</h1>
+   <div style="font-weight: bolder;">Full song on SoundCloud and YouTube</div>
+	 <p>
+	<a href="https://soundcloud.com/jotavi_ivavi/on-my-way" target="blank"><img src="soundcloud-logo.png" style="width:42px;height:42px"></a>
+	<a href="https://youtu.be/07ZVOOh8Mq0" target="blank"><img src="youtube1-logo.png" style="width:42px;height:42px"></a>
+	</p>	 
+  <button id="myBtn" onclick="myFunction()">Play</button>  
+</div>
+<script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
+</body>
+</html>
